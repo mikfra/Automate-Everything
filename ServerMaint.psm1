@@ -87,6 +87,7 @@ function Get-AdminServices{
 # Function Name: Get-ChangeAdminServices
 # Retreives Rename the Admin Password and change all services for the account. 
 # Admin Account = Currently logged in as admin. Please check services with Get-AdminServices
+# ToDo: Test with Multiple Services
 # -------------------------------------------
 function Get-ChangeAdminServices{
     $in= Read-Host -Prompt 'Enter password to change for the This Account and its Attatched Services:'
