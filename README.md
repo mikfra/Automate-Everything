@@ -15,18 +15,18 @@
 
 # DomainDeploy.ps1 (Deploy a Domain Controller)  
 Does this:
-            Nodename = "DC01"
-            ThisComputerName = "DC01"
-            IPAddress = "192.168.198.129/24"
-            DnsAddress = "192.168.198.2"
-            GatewayAddress = "192.168.198.2"
-            InterfaceAlias = "Ethernet0"
-            DomainName = "MePush.local"
-            DomainDN = "DC=MePush,DC=local"
-            DCDatabasePath = "C:\NTDS"
-            DCLogPath = "C:\NTDS"
-            SysvolPath = "C:\Sysvol"
-            PSDscAllowPlainTextPassword = $true
-            PSDscAllowDomainUser = $true
+-            Nodename = "DC01"
+-            ThisComputerName = "DC01"
+-            IPAddress = "192.168.198.129/24"
+-            DnsAddress = "192.168.198.2"
+-            GatewayAddress = "192.168.198.2"
+-            InterfaceAlias = "Ethernet0"
+-            DomainName = "MePush.local"
+-            DomainDN = "DC=MePush,DC=local"
+-            DCDatabasePath = "C:\NTDS"
+-            DCLogPath = "C:\NTDS"
+-            SysvolPath = "C:\Sysvol"
+-            PSDscAllowPlainTextPassword = $true
+-            PSDscAllowDomainUser = $true
 
 Change to what you need... 
