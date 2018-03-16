@@ -14,7 +14,7 @@
 - Installs Modules for ActiveDirectory, CompputerMgmt, Networking, Dns
 
 # DomainDeploy.ps1 (Deploy a Domain Controller)  
-Does this:
+Deploys the server. User will need to change values(Inprocess for parameters):
 -            Nodename = "DC01"
 -            ThisComputerName = "DC01"
 -            IPAddress = "192.168.198.129/24"
@@ -30,3 +30,9 @@ Does this:
 -            PSDscAllowDomainUser = $true
 
 Change to what you need... 
+
+#Kill Emotet (Based on Tyler's Emotet Detection that deletes services)
+Set-Executionpolicy unrestricted
+.\kill_emotet.ps1
+
+
