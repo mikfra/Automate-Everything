@@ -34,12 +34,12 @@ function Get-LoggedIn {
 function Get-Uptime {
     [CmdletBinding()]
     param (
-        [string]$ComputerName = 'localhost'
+        [Parameter(ValueFromRemainingArguments=$true)][string[]]$ComputerName = {'localhost'}
     )
     
     foreach ($Computer in $ComputerName){
-        $pc = $computername
-        $os = Get-WmiObject -Class Win32_OperatingSystem -ComputerName $computername
+        $pc = $computer
+        $os = Get-WmiObject -Class Win32_OperatingSystem -ComputerName $computer
         $diff = $os.ConvertToDateTime($os.LocalDateTime) - $os.ConvertToDateTime($os.LastBootUpTime)
 
         $properties=@{
