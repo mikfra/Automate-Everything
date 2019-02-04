@@ -1,0 +1,14 @@
+function f_DirSearch {
+    case $1 in
+        "directory")
+            find ./ -maxdepth 12 -type d
+            ;;
+ 
+        "link")
+            find ./ -maxdepth 12 -type l
+            ;;
+        *)
+            echo "Usage $0 directory | link"
+            ;;
+ 
+esac

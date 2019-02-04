@@ -1,0 +1,3 @@
+function f_whatsup {
+    service --status-all | grep "+" --color=auto
+}

